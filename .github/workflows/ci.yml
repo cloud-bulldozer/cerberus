@@ -21,9 +21,9 @@ jobs:
       - name: flake8 Lint
         uses: py-actions/flake8@v1
         with:
-          ignore: E123,E125
+          ignore: E123,E125,W503
           exclude: .venv,.git,.tox,dist,doc,*lib/python*,*egg,build
-          max-line-length: 110
+          max-line-length: 120
   package-install-ci:
     runs-on: ubuntu-latest
     name: Install cerberus
