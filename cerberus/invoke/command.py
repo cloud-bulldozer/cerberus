@@ -7,8 +7,7 @@ import sys
 def invoke(command):
     output = ""
     try:
-        output = subprocess.check_output(command, shell=True,
-                                         universal_newlines=True)
+        output = subprocess.check_output(command, shell=True, universal_newlines=True)
     except Exception:
         logging.error("Failed to run %s" % (command))
         sys.exit(1)
